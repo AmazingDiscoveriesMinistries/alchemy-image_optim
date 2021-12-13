@@ -6,7 +6,7 @@ module Alchemy
 
       initializer "register_dragonfly_image_optim_processor" do
         ::Dragonfly.app(:alchemy_pictures).configure do |config|
-          config.processor(:optimize, Processor)
+          config.processor(:optimize, Processor.new)
         end
       end
 

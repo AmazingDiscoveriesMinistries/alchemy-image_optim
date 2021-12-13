@@ -1,7 +1,7 @@
 module Alchemy
   module ImageOptim
     class Processor
-      def optimize(temp_object)
+      def call(temp_object)
         begin
           io = ::ImageOptim.new
           optimized = io.optimize_image(temp_object.path)
